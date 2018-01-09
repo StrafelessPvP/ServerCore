@@ -1,4 +1,5 @@
 # ServerCore
 
 ### ToDo
-- [ ] CleanUP
+- [ ] CleanUp
+- [ ] Add permissions to commands

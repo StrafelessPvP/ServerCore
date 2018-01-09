@@ -1,0 +1,5 @@
+name: ServerCore
+author: StrafelessPvP
+main: Core\Loader
+version: 1.0
+api: 3.0.0  

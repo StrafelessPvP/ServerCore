@@ -13,6 +13,7 @@ class Loader extends PluginBase {
     public function onEnable() {
         $this->onRegisterEvents();
         $this->onRegisterCommands();
+        $this->onWorldTime();
     }
 
     public function onRegisterEvents() {
@@ -22,5 +23,11 @@ class Loader extends PluginBase {
 
     public function onRegisterCommands() {
         $this->getServer()->getCommandMap()->register("clearlagg", new ClearLagg($this));
+    }
+
+    public function onWorldTime() {
+        $this->getServer()->loadLevel("World");
+        $this->getServer()->getLevelByName("World")->setTime(0);
+        $this->getServer()->getLevelByName("World")->stopTime();
     }
 }

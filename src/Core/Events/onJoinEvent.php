@@ -7,6 +7,7 @@ use pocketmine\item\Item;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
+use Core\Task\ElderGuardianTask;
 use Core\Loader;
 
 class onJoinEvent implements Listener {
@@ -31,5 +32,6 @@ class onJoinEvent implements Listener {
         }
         $event->setJoinMessage("");
         $this->core->getServer()->broadcastPopup("§a+§e $name");
+        $this->core->getServer()->getScheduler()->scheduleDelayedTask(new ElderGuardianTask($this->core, $event->getPlayer()), 16);
     }
 }

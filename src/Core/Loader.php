@@ -8,6 +8,7 @@ use Core\Events\onQuitEvent;
 /* Commands */
 use Core\Commands\ClearLagg;
 use Core\Commands\GetPOS;
+use Core\Commands\Spawn;
 
 class Loader extends PluginBase {
 
@@ -25,6 +26,7 @@ class Loader extends PluginBase {
     public function onRegisterCommands() {
         $this->getServer()->getCommandMap()->register("clearlagg", new ClearLagg($this));
         $this->getServer()->getCommandMap()->register("position", new GetPOS($this));
+        $this->getServer()->getCommandMap()->register("spawn", new Spawn($this));
     }
 
     public function onWorldTime() {

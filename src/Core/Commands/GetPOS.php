@@ -21,10 +21,7 @@ class GetPOS extends Command {
         $outY = round($playerY, 1);
         $outZ = round($playerZ, 1);
         $playerLevel = $sender->getLevel()->getName();
-        $sender->sendMessage("§2X:§3 " . $outX);
-        $sender->sendMessage("§2Y:§3 " . $outY);
-        $sender->sendMessage("§2Z:§3 " . $outZ);
-        $sender->sendMessage("§2World:§3 " . $playerLevel);
+        $sender->sendMessage("§2X:§3 ". $outX. ", §2Y:§3 ". $outY. ", §2Z:§3 ". $outZ. ", §2World:§3 " . $playerLevel);
         return true;
     }
 }

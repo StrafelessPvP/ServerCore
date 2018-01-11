@@ -29,9 +29,9 @@ class onJoinEvent implements Listener {
             $item7 = Item::get(Item::WOOD, 0, 32);
             $item8 = Item::get(Item::STEAK, 0, 16);
             $player->getInventory()->addItem($item1, $item2, $item3, $item4, $item5, $item6, $item7, $item8);
-          	$this->core->getServer()->broadcastMessage("$name has joined for the first time!!");
+            $this->core->getServer()->broadcastMessage("$name has joined for the first time!!");
         } else {
-        	$player->sendMessage("Welcome back $name");
+            $player->sendMessage("Welcome back $name");
         }
         $event->setJoinMessage("");
         $this->core->getServer()->broadcastPopup("§a+§e $name");
